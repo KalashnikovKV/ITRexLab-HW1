@@ -1,7 +1,25 @@
 // source
-function setABS(num) { console.log(`ABS:${num}`) }
-function setTraction(num) { console.log(`Traction Control:${num}`) }
-function setStability(num) { console.log(`Stability Control:${num}`) }
+function setABS(num) { 
+    if (num<6 && num>0){
+        console.log(`ABS:${num}`)
+    }else {
+        alert(`error ABS:${num}`)
+    }
+}
+function setTraction(num) { 
+    if (num<6 && num>0){
+        console.log(`Traction Control:${num}`)
+    }else {
+        alert(`error Traction Control:${num}`)
+    } 
+}
+function setStability(num) {
+    if (num<6 && num>0){
+        console.log(`Stability Control:${num}`)
+    }else {
+        alert(`error Stability Control:${num}`)
+    }  
+}
 
 //code
 function beginner(num) {

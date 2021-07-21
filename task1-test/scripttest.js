@@ -6,9 +6,28 @@
 */
 
 // source
-function setABS(num) { console.log(`ABS:${num}`) }
-function setTraction(num) { console.log(`Traction Control:${num}`) }
-function setStability(num) { console.log(`Stability Control:${num}`) }
+function setABS(num) { 
+    if (num<6 && num>0){
+        console.log(`ABS:${num}`)
+    }else {
+        console.log(`Неверное значение ABS:${num}` + ' ' + 'Выберите значение от 1 до 5')
+
+    }
+}
+function setTraction(num) { 
+    if (num<6 && num>0){
+        console.log(`Traction Control:${num}`)
+    }else {
+        console.log(`Неверное значение Traction Control:${num}` + ' ' + 'Выберите значение от 1 до 5')
+    } 
+}
+function setStability(num) {
+    if (num<6 && num>0){
+        console.log(`Stability Control:${num}`)
+    }else {
+        console.log(`Неверное значение Stability Control:${num}` + ' ' + 'Выберите значение от 1 до 5')
+    }  
+}
 
 //code
 let inputABS = document.querySelector('.rangeABS');
@@ -19,21 +38,37 @@ let buttonBegginer = document.querySelector('.beginner')
 let buttonGoodDriver = document.querySelector('.goodDriver')
 let buttonManiac = document.querySelector('.maniac')
 
-let numBeginner = 5
+let numBeginner = 6
 let numGoodDriver = 3
 let numManiac = 1
 
 //input range
 inputABS.addEventListener('click', () =>{
-    setABS(inputABS.value)   
+    if(inputABS.value<6 && inputABS.value>0){
+        setABS(inputABS.value) 
+    } else {
+        inputABS.value = 1
+        alert('Выберите значение от 1 до 5')
+    }
 })
 
 inputTraction.addEventListener('click', () =>{ 
+    if(inputTraction.value<6 && inputTraction.value>0){
+        setABS(inputABS.value) 
+    } else {
+        inputTraction.value = 1
+        alert('Выберите значение от 1 до 5')
+    }
     setTraction(inputTraction.value)
 })
 
 inputStability.addEventListener('click', () =>{
-    setStability(inputStability.value)
+    if(inputStability.value<6 && inputStability.value>0){
+        setABS(inputStability.value) 
+    } else {
+        inputStability.value = 1
+        alert('Выберите значение от 1 до 5')
+    }
 })
 
 //button
@@ -54,9 +89,15 @@ buttonManiac.addEventListener('click', () =>{
 
 //function
 function newValueInput(num) {
-    inputABS.value = num
-    inputTraction.value = num
-    inputStability.value = num
+    if(num<6 && num>0){
+        inputABS.value = num
+        inputTraction.value = num
+        inputStability.value = num
+    }else {
+        inputABS.value = inputABS.value
+        inputTraction.value = inputTraction.value
+        inputStability.value = inputStability.value
+    }
 }
 
 function sourceSetFunc(num) {
