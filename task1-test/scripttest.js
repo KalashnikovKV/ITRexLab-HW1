@@ -21,7 +21,7 @@ let buttonManiac = document.querySelector('.maniac')
 
 let numBeginner = 5
 let numGoodDriver = 3
-let numManiac = 0
+let numManiac = 1
 
 //input range
 inputABS.addEventListener('click', () =>{

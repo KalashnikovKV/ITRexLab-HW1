@@ -27,4 +27,4 @@ function maniac(num) {
 
 beginner(5)
 goodDriver(3)
-maniac(0)
+maniac(1)
